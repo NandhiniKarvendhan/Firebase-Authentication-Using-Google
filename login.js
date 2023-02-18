@@ -2,12 +2,14 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyBsFFdqu_XL_C6mr_TtLnYWEl4k2WiAmJM",
-    authDomain: "authentication-using-6a5a9.firebaseapp.com",
-    projectId: "authentication-using-6a5a9",
-    storageBucket: "authentication-using-6a5a9.appspot.com",
-    messagingSenderId: "522856598270",
-    appId: "1:522856598270:web:fbf7bb19b63eb2837fb3af",
+    apiKey: "AIzaSyCbFsUiLoBW-iRpvMvtsEnS7l9YN2G13SA",
+    authDomain: "courso-ac2a0.firebaseapp.com",
+    databaseURL:
+      "https://courso-ac2a0-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "courso-ac2a0",
+    storageBucket: "courso-ac2a0.appspot.com",
+    messagingSenderId: "929018513987",
+    appId: "1:929018513987:web:52ee27ccee6c3add82a2f6",
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -22,25 +24,23 @@
   const googlelogin = document.getElementById("googlelogin");
 
   //TODO: Add Google Sign in
-  // googlelogin.addEventListener("click", (e) => {
-  //   console.log("google sign in clicked");
+  googlelogin.addEventListener("click", (e) => {
+    console.log("google sign in clicked");
 
-  //   // TODO: Use firebase.auth.GoogleAuthProvider() to implement Google sign in
-  //   // Hint: the user email address is in the results user object: result.user.email
+    //   // TODO: Use firebase.auth.GoogleAuthProvider() to implement Google sign in
+    //   // Hint: the user email address is in the results user object: result.user.email
 
-  //   const auth = firebase.auth();
-  //   const signInWithGoogle = () => {
-  //     const provider = new firebase.auth.GoogleAuthProvider();
-  //     auth
-  //       .signInWithPopup(provider)
-  //       .then(() => {
-  //         window.location.assign("./profile");
-  //         // IdP data available using getAdditionalUserInfo(result)
-  //         // ...
-  //       })
-  //       .catch((e) => console.log(e.message));
-  //   };
-  // });
+    const auth = firebase.auth();
+    const signInWithGoogle = () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth
+        .signInWithPopup(provider)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((e) => console.log(e.message));
+    };
+  });
 
   // login
   login.addEventListener("click", (e) => {
