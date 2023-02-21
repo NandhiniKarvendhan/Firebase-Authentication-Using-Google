@@ -35,13 +35,10 @@
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
-        var credential = result.credential;
-        var token = credential.accessToken;
-        var user = result.user;
         console.log(result.user.email);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((e) => {
+        console.log(e.message);
       });
   });
 
@@ -75,7 +72,7 @@
   firebase.auth().onAuthStateChanged((firebaseUser) => {
     if (firebaseUser) {
       console.log(firebaseUser);
-      loggedInStatus.innerText = `You are logged in using the following email: ${result.user.email}`;
+      loggedInStatus.innerText = `You are logged in using the following email: ${firebaseUser.email}`;
       logout.style.display = "inline";
       login.style.display = "none";
       signup.style.display = "none";
