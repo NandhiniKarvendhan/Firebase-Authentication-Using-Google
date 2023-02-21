@@ -30,7 +30,7 @@
     //   // TODO: Use firebase.auth.GoogleAuthProvider() to implement Google sign in
     //   // Hint: the user email address is in the results user object: result.user.email
     const provider = new firebase.auth.GoogleAuthProvider();
-    provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
+
     firebase
       .auth()
       .signInWithPopup(provider)
@@ -38,7 +38,7 @@
         var credential = result.credential;
         var token = credential.accessToken;
         var user = result.user;
-        console.log(user);
+        console.log(result.user.email);
       })
       .catch((error) => {
         console.log(error);
