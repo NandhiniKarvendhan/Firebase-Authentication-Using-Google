@@ -35,7 +35,6 @@
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
-        // loggedInStatus.innerText = result.user.displayName;
         console.log(result.user.email);
       })
       .catch((e) => {
