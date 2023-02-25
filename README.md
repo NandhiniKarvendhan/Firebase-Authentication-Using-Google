@@ -3,8 +3,6 @@
 Firebase Authentication provides back-end services and ready-made UI libraries to authenticate users to app.
 To sign a user into the app, first receive authentication credentials from app. These credentials can be the user's email address and password or, alternatively, an OAuth token from a federated identity provider such as Facebook or Google.
 
-## [Demo](https://nandhinikarvendhan.github.io/Firebase-Authentication-Using-Google/)
-
 ## License information:
 
 MIT License
