@@ -7,7 +7,8 @@ To sign a user into the app, first receive authentication credentials from app. 
 ## How to use
 1. Download or clone the repository.
 2. Run npm install in terminal.
-3. 
+3. Open index file in the browser. 
+
 ## License information:
 
 MIT License
